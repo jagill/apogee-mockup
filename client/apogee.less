@@ -41,14 +41,26 @@ div.module {
 /////////////
 // Status panel
 
-@colorError: #8E241E;
+@colorError: #AF3E37;
+@colorWarning: #E68C2F;
+@colorInfo: #3F83A1;
+@colorOk: #568E45;
 
-ul#testFailures {
+span.ok {
+    color: @colorOk;
+    
+    &:before {
+        content: url("/images/accept.png");
+        padding-right: 4px;
+    }
+}
 
-    li {
-        list-style-image: url('/images/delete.png');
-        vertical-align: top;
-        color: @colorError;
+#testStatus {
+    ul#testFailures {
+        li {
+            list-style-image: url('/images/delete.png');
+            color: @colorError;
+        }
     }
 
 }
