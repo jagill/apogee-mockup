@@ -5,3 +5,5 @@
 Template.testStatus.testFailures = ->
   TestFailures.find().fetch()
 
+Template.codeIssues.codeIssues = ->
+  CodeIssues.find({}, {sort: {severity: 1}}).fetch()

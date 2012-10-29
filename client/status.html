@@ -16,7 +16,15 @@
 <template name="codeIssues">
   <div id="codeIssues" class="module">
       <h4>Code Issues</h4>
+    {{#if codeIssues}}
+      <ul>
+        {{#each codeIssues}}
+          <li class="{{this.severityClass}}">{{this.message}}</li> 
+        {{/each}}
+      </ul>
+    {{else}}
       <span class="ok">No code issues detected.</span>
+    {{/if}}
   </div>
 </template>
 

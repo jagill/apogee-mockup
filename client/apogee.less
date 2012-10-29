@@ -33,8 +33,8 @@ div.module {
         padding-left: 16px;
     }
 
-    span {
-        padding-left: 16px;
+    span, li {
+        margin-left: 16px;
     }
 }
 
@@ -65,6 +65,20 @@ span.ok {
 
 }
 
+#codeIssues {
+    li.error {
+        list-style-image: url('/images/delete.png');
+        color: @colorError;
+    }
+    li.warning {
+        list-style-image: url('/images/warning.png');
+        color: @colorWarning;
+    }
+    li.info {
+        list-style-image: url('/images/info.png');
+        color: @colorInfo;
+    }
+}
 
 ////////////
 // Filetree
