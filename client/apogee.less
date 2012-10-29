@@ -9,6 +9,7 @@
 @borderRadius: 4px;
 @baseFontSize: 12px;
 
+
 .rounded-border (@radius: 4px) {
   border: 1px solid #dddddd;
   border-collapse: separate;
@@ -36,6 +37,26 @@ div.module {
         padding-left: 16px;
     }
 }
+
+/////////////
+// Status panel
+
+@colorError: #8E241E;
+
+ul#testFailures {
+
+    li {
+        list-style-image: url('/images/delete.png');
+        vertical-align: top;
+        color: @colorError;
+    }
+
+}
+
+
+////////////
+// Filetree
+
 
 .filetree-indent(@numIndents) {
   padding-left: (16px * @numIndents);

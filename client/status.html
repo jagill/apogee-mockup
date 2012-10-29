@@ -1,8 +1,16 @@
 <template name="testStatus">
-  <div id="testStatus" class="module">
-      <h4>Test Status</h4>
-      <span>All tests pass.</span>
-  </div>
+<div id="testStatus" class="module">
+    <h4>Test Status</h4>
+    {{#if testFailures}}
+      <ul id="testFailures">
+        {{#each testFailures}}
+        <li>{{this.message}}</li> 
+        {{/each}}
+      </ul>
+    {{else}}
+    <span>All tests pass.</span>
+    {{/if}}
+</div>
 </template>
 
 <template name="codeIssues">
