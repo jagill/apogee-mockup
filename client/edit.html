@@ -1,0 +1,27 @@
+<template name="fileTree">
+<div id="fileTree" class="module"><h4>File Tree</h4>
+<ul class="fileTree">
+    {{#each files}}
+      {{>fileEntry}}
+    {{/each}}
+</ul>
+</div>
+</template>
+
+<template name="fileEntry">
+  <li class="{{fileEntryClass}}" id="{{this._id}}">
+    <span>{{this.name}}</span> 
+  </li>
+  {{#if isOpen and this.children.length}}
+    {{#each this.children}}
+      {{>fileEntry this}}
+    {{/each}}
+  {{/if}}
+</template>
+
+<template name="fileView">
+<div id="fileView" class="module"><h4>{{fileName}}</h4>
+    <div id="fileView" ></div>
+</div>
+</template>
+

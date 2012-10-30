@@ -10,18 +10,20 @@
         {{> signinModal}}
         <div class="row">
             <div class="span8">
-                <div class="row">
-                    {{> testStatus}}
-                </div>
-                <div class="row">
-                    {{> codeIssues}}
-                </div>
+                {{> testStatus}}
+                {{> codeIssues}}
             </div>
             <div class="span4">
                 {{> latestChanges}}
             </div>
         </div>
         <div class="row">
+          <div class="span4">
+            {{> fileTree}}
+          </div>
+          <div class="span8">
+            {{> fileView}}
+          </div>
         </div>
     </div>
 </body>
