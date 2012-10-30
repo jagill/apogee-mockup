@@ -26,4 +26,34 @@ constructFileTree = (files) ->
     
   return fileTree
 
+##
+# Takes a file and populates parents
+# From:
+# {
+#   path: result.name,
+#   projectId: projectId,
+#   isDir: result.isDir,
+#   body: data
+# }
+processFile = (result) ->
+  path = result.path
+  #console.log("Found path " + JSON.stringify(path) )
+  if path.charAt(0) == '/'
+    path = path.substring(1,path.length)
+  if path.charAt(path.length) == '/'
+    path = path.substring(0,path.length-1)
+  result.path = path
+
+  lastSlashIdx = path.lastIndexOf('/')
+  result.name = path.substring(lastSlashIdx+1, path.length)
+
+  parentPathStr = path.substring(0,lastSlashIdx)
+  if parentPathStr == ''
+    result.parents = []
+  else
+    result.parents = parentPathStr.split('/')
+
+  #Clear out initial _id
+  delete result._id
+  return result
 

@@ -29,4 +29,9 @@ removeChange = (id) ->
 clearChange = ->
   Changes.remove({})
 
+insertFile = (path, isDir, body) ->
+  file = {path:path, projectId:"123ADF", isDir:isDir, body:body}
+  file = processFile(file)
+  Files.insert(file)
+
 
