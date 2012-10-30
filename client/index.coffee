@@ -1,3 +1,6 @@
+Meteor.startup( ->
+)
+
 Handlebars.registerHelper('currentPage', ->
   return router?.page()
 )

@@ -31,6 +31,29 @@
 <template name="latestChanges">
   <div id="latestChanges" class="module">
       <h4>Latest Changes</h4>
-      <span>No changes yet.</span>
+      {{#if changes}}
+        <ul>
+          {{#each changes}}
+          <li>
+            <div class="changeEntry">
+              <div>
+                <span class="username">{{this.username}}</span>
+                <time class="timestamp timeago" datetime="{{this.whenCommitted}}">{{this.whenCommitted}}</time>
+              </div>
+              <div>
+                  <span class="changeHash">{{this.hash}}</span>
+              </div>
+              <div>
+                <span class="description">
+                    {{this.shortDescription}}
+                </span>
+              </div>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+      {{else}}
+        <span>No changes yet.</span>
+      {{/if}}
   </div>
 </template>

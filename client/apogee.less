@@ -5,6 +5,7 @@
 
 @textColorDefault: #333;
 @textColorSelected: #fff;
+@textColorSecondary: #666;
 
 @borderRadius: 4px;
 @baseFontSize: 12px;
@@ -78,6 +79,43 @@ span.ok {
         list-style-image: url('/images/info.png');
         color: @colorInfo;
     }
+}
+
+#latestChanges {
+
+  ul {
+      margin-left: 0;
+  }
+
+  li {
+      list-style-type: none;
+      margin-left: 0px;
+  }
+
+  .username {
+      color: @colorInfo;
+  }
+  
+  .timestamp {
+      color: @colorInfo;
+      float: right;
+      padding-right: 16px;
+  }
+
+  .changeHash {
+      color: @textColorSecondary;
+      font-size: 9px;
+  }
+
+  .description {
+      color: @textColorSecondary;
+  }
+
+  .changeEntry {
+      border-top: 1px solid #dddddd;
+      padding-top: 4px;
+  }
+
 }
 
 ////////////

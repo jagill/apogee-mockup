@@ -7,3 +7,10 @@ Template.testStatus.testFailures = ->
 
 Template.codeIssues.codeIssues = ->
   CodeIssues.find({}, {sort: {severity: 1}}).fetch()
+
+Template.latestChanges.changes = ->
+  Changes.find({}, {sort: {whenCommitted: -1}}).fetch()
+
+Template.latestChanges.rendered = ->
+     $("time.timeago").timeago()
+  

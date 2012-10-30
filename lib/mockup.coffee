@@ -19,3 +19,14 @@ removeCI = (id) ->
 
 clearCI = ->
   CodeIssues.remove({})
+
+insertChange = (time, username, hash, shortDesc) ->
+  Changes.insert({whenCommitted:time, username:username, hash:hash, shortDescription:shortDesc})
+
+removeChange = (id) ->
+  Changes.remove(id)
+
+clearChange = ->
+  Changes.remove({})
+
+
