@@ -11,6 +11,10 @@
 @baseFontSize: 12px;
 
 
+.top-divider {
+  border-top: 1px solid #dddddd;
+}
+
 .rounded-border (@radius: 4px) {
   border: 1px solid #dddddd;
   border-collapse: separate;
@@ -112,7 +116,7 @@ span.ok {
   }
 
   .changeEntry {
-      border-top: 1px solid #dddddd;
+      .top-divider;
       padding-top: 4px;
   }
 
@@ -181,36 +185,8 @@ ul.fileTree {
 
 }
 
-#fileTreeProjectName {
-  margin-bottom: 12px;
-  .rounded-border();
-
-  h4 {
-      padding-left: 16px;
-  }
-}
-
-#editor {
-  position: absolute;
-  width: 600px;
-  height: 400px;
-  .rounded-border(@borderRadius);
-}
-
-#editorFileName {
-  width: 600px;
-  margin-bottom: 12px;
-  .rounded-border();
-
-  h4 {
-      padding-left: 38px;
-  }
-}
-
-#addFiles {
-  span {
-    font-size: @baseFontSize;
-  }
+#fileBody {
+    .top-divider;
 }
 
     

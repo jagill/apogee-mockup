@@ -1,4 +1,5 @@
 DEFAULT_FILE_NAME = "Select a file"
+DEFAULT_FILE_BODY = "Empty File"
 DEFAULT_PROJECT_NAME = "New Project"
 ROOT_DIR_NAME = "the root directory."
 
@@ -42,6 +43,11 @@ Template.fileEntry.events(
 
 Template.fileView.rendered = ->
   0
+
+Template.fileView.fileBody = ->
+  fileId = Session.get("lastTextFileId")
+  name = if fileId then Files.findOne(fileId)?.body else null
+  return name
 
 Template.fileView.fileName = ->
   fileId = Session.get("lastTextFileId")

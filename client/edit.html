@@ -20,8 +20,15 @@
 </template>
 
 <template name="fileView">
-<div id="fileView" class="module"><h4>{{fileName}}</h4>
-    <div id="fileView" ></div>
+<div id="fileView" class="module">
+    <h4>{{fileName}}</h4>
+    <div id="fileBody">
+        {{#if fileBody}}
+            <span>{{{fileBody}}}</span>
+        {{else}}
+            <span><em>[File is empty]</em></span>
+        {{/if}}
+    </div>
 </div>
 </template>
 
