@@ -1,6 +1,7 @@
 <template name="testStatus">
 <div id="testStatus" class="module">
     <h4>Test Status</h4>
+    <div class="module-body">
     {{#if testFailures}}
       <ul id="testFailures">
         {{#each testFailures}}
@@ -10,12 +11,14 @@
     {{else}}
     <span class="ok">All tests pass.</span>
     {{/if}}
+    </div>
 </div>
 </template>
 
 <template name="codeIssues">
   <div id="codeIssues" class="module">
       <h4>Code Issues</h4>
+    <div class="module-body">
     {{#if codeIssues}}
       <ul>
         {{#each codeIssues}}
@@ -25,6 +28,7 @@
     {{else}}
       <span class="ok">No code issues detected.</span>
     {{/if}}
+</div>
   </div>
 </template>
 

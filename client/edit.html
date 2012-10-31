@@ -1,6 +1,6 @@
 <template name="fileTree">
 <div id="fileTree" class="module"><h4>File Tree</h4>
-<ul class="fileTree">
+<ul class="fileTree module-body">
     {{#each files}}
       {{>fileEntry}}
     {{/each}}
@@ -22,7 +22,7 @@
 <template name="fileView">
 <div id="fileView" class="module">
     <h4>{{fileName}}</h4>
-    <div id="fileBody">
+    <div id="fileBody" class="module-body">
         {{#if fileBody}}
             <span>{{{fileBody}}}</span>
         {{else}}

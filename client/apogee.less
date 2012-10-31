@@ -13,6 +13,7 @@
 
 .top-divider {
   border-top: 1px solid #dddddd;
+  padding-top: 8px;
 }
 
 .rounded-border (@radius: 4px) {
@@ -35,12 +36,17 @@ div.module {
     margin: 16px 0;
 
     h4 {
-        padding-left: 16px;
+      padding-left: 16px;
     }
 
     span, li {
         margin-left: 16px;
     }
+
+    .module-body {
+        .top-divider;
+    }
+
 }
 
 /////////////
@@ -117,7 +123,6 @@ span.ok {
 
   .changeEntry {
       .top-divider;
-      padding-top: 4px;
   }
 
 }
@@ -136,6 +141,7 @@ ul.fileTree {
 
     span {
         font-size: @baseFontSize;
+        margin-left: 4px;
     }
 
     li {
@@ -186,7 +192,6 @@ ul.fileTree {
 }
 
 #fileBody {
-    .top-divider;
+    padding-bottom: 8px;
 }
-
     
